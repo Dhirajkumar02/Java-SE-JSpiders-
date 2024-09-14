@@ -1,4 +1,4 @@
- package com;
+ package numberSystemPrograms;
 
 import java.util.Scanner;
 
@@ -7,11 +7,14 @@ public class PalindromeNumber {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the Number: ");
 		int n = sc.nextInt();
-		boolean res = palindromeNumber(n);
-		System.out.println(res);
+		boolean rs = checkPalindromeNumber(n);
+		if(rs)
+			System.out.println(n+ " is a palindrome number.");
+		else
+		    System.out.println(n+ " is not a palindrome number.");
 		sc.close();
 	}
-	static boolean palindromeNumber(int n) {
+	static boolean checkPalindromeNumber(int n) {
 		int ans=n;
 		int res = 0;
 		do {
@@ -19,11 +22,14 @@ public class PalindromeNumber {
 			res = res*10 + x;
 			n =n/10;
 		}while(n != 0);
-		if(res==ans) {
-			return true;
-		}else {
-			return false;
-		}
+		
+		return res == ans;
+		
+//		if(res == ans) {
+//			return true;
+//		}else {
+//			return false;
+//		}
 
 	}
 

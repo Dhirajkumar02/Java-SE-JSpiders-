@@ -1,4 +1,4 @@
-package com;
+package numberSystemPrograms;
 
 import java.util.Scanner;
 
@@ -21,6 +21,7 @@ public class PrintNthFibonacciNumber {
 		}
 
 		int n1 = 0, n2 = 1, nth = 0;
+		int i=3;
 
 		if (n == 1) {
 			return n1; // The 1st Fibonacci number is 0
@@ -29,12 +30,20 @@ public class PrintNthFibonacciNumber {
 		}
 
 		// Calculate the nth Fibonacci number using a loop
-		for (int i = 3; i <= n; i++) {
+		/* for (int i = 3; i <= n; i++) {
 			nth = n1 + n2;
 			n1 = n2;
 			n2 = nth;
 		}
 
+		return nth;
+		*/
+		while(i<=n) {
+			nth = n1+n2;
+			n1=n2;
+			n2=nth;
+			i++;
+		}
 		return nth;
 	}
 }

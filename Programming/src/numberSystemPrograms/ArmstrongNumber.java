@@ -1,4 +1,4 @@
-package com;
+package numberSystemPrograms;
 
 import java.util.Scanner;
 
@@ -7,7 +7,6 @@ public class ArmstrongNumber {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the number: ");
 		int n = sc.nextInt();
-		sc .close();
 		boolean rs =isArmstrong(n);
 		if(rs) {
 			System.out.println(n+" is an armstrong number");
@@ -15,6 +14,8 @@ public class ArmstrongNumber {
 		else {
 			System.out.println(n+" is not an armstrong number");
 		}
+		
+		sc .close();
 
 	}
 
